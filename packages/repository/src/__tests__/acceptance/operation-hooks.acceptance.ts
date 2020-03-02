@@ -19,7 +19,7 @@ describe('Operation hooks', () => {
   const expectedArray = [beforeSave, afterSave];
 
   it('supports operation hooks', async () => {
-    const p = await repo.create({slug: 'pencil'});
+    await repo.create({slug: 'pencil'});
     expect(repo.hooksCalled).to.eql(expectedArray);
   });
 
